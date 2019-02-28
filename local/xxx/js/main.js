@@ -1,2 +1,2 @@
-var string = "Hello World"
+var string ="Hello World"
 alert(string)
