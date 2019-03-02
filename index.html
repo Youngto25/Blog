@@ -3,9 +3,72 @@
   <head>
     <title>我的简历</title>
   <style>
-  </style>
+    iframe{
+      width: 100%;
+      height: 400px;
+    }
+    table{
+      border-collapse: collapse; 
+    }
+  </style><!--table的border默认有空间，border-collapse可以让表格没有空隙-->
   </head>
   <body>
+    <iframe src="http:qq.com" name="BBB"></iframe>
+    <a href="http:baidu.com" target="BBB">百度</a>
+    <hr>
+      
+      <a href="">link1</a>
+      <br>
+      <a href="#">link2</a>
+      <hr>
+      <form acton="index2.html" method="post">
+          <label for="x">用户名</label><input type="text" name="username" id="x">
+          <label>密码<input type="text" name="password"></label>
+          喜欢的水果:
+          <input type="checkbox" id="xxx"><label for="xxx" name="fruit" value="orange">orange</label>
+          <label name="fruit" value="banana"><input type="checkbox">香蕉</label>
+          爱我
+          <label><input name="loveme" type="radio" value="yes">yes</label><!--两个名字定义一样，可以防止同时被选中，radio为单选框-->
+          <label><input name="loveme" type="radio" value="no">no</label>
+          <select name="group"><!--放入multiple属性则表示可多选-->
+            <option value="">-</option>
+            <option value="1">第一组</option>
+            <option value="2">第二组</option>
+            <option value="3" disabled>第三组</option><!--不能选中-->
+            <option value="4" selected>第四组</option><!--默认选中-->
+          </select>
+          <hr>
+          <textarea style="resize:none;width:200px;height:100px;" name="爱好"></textarea><!--cols="30" rows="10"也可用行列来定义大小，若不定义大小，则此框可随意拉-->
+          <input type="submit" value="提交">
+      </form>
+      <hr>
+      <table border="1">
+          <colgroup>
+          <col width=100px>
+          <col width=100px>
+          <col width=100px>
+          <col width=70px>
+          </colgroup>
+          <thead>
+            <th></th>
+            <th>name</th>
+            <th>class</th>
+            <th>grade</th>
+          </thead>
+          <tbody>
+            <tr>
+              <th>hello</th><td>blake</td><td>2</td><td>3</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>world</th><td>yang</td><td>2</td><td>3</td>
+            </tr>
+          </tfoot>
+        </table>
+
+    <a href="http://www.qq.com" download>下载</a>
+    
     <img src="#" alt="logo"/>
     <div class="topNavBar">
      <nav>
@@ -53,7 +116,36 @@
       </div>
       </div>
       <a class="button" href="#">下载PDF简历</a>
+      <p>
+        方应杭， 资深前端工程师，资深前端讲师，现在在 饥人谷 教前端课程。<br>
+        技能：前端开发，Rails 开发，Node.js 开发
+      </p>
     </main>
-
+    <section>
+      <h2>技能</h2>
+      <ol>
+        <li>HTML 5 &amp; CSS 3</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+        <li>Vue</li>
+        <li>React</li>
+        <li>HTTP</li>
+      </ol>
+    </section>
+    <section>
+      <h2>作品集</h2>
+      <nav>
+        <ol>
+          <li>所有</li>
+          <li>框架</li>
+          <li>原生JS&amp;CSS</li>
+        </ol>
+      </nav>
+      <div class="jobs">
+        <div class="big"></div>
+        <div class="small"></div>
+        <div class="small"></div>
+      </div>
+    </section>
   </body>
 </html>
