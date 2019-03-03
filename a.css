@@ -7,13 +7,28 @@
   body{
     background-color:black;
     color:white;
+    margin:0px;
   }
   
   .topNavBar>a{
-    text-decoration: none;/*去除下划线*/
+    text-decoration: none;/*去除下划线、继承body的颜色*/
     color:inherit;
   }
   
+  .topNavBar{
+    /*padding-top:24px;
+    padding-bottom:24px;
+    padding-left:16px;
+    padding-right:16px;
+    */
+    padding:24px 16px 24px 16px;
+  }
+
+ .topNavBar>nav{
+    padding-top:4px;
+    padding-bottom:4px;
+ }
+
   .topNavBar>nav>ul{
     list-style:none;/*去除无序列表圆点、外边距属性top right bottom left、内边距属性*/
     margin:0;
@@ -31,7 +46,7 @@
     color:#B7B7B7;
     text-decoration:none;
     font-weight: bold;
-    border-top:3px;
+    border-top:3px solid transparent;
     border-bottom: 3px solid transparent;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -53,4 +68,9 @@
   
   .topNavBar .logo .card{
     color:#9a9da2;
+  }
+
+  .test{
+    font-size:14px;
+    line-height:30px;
   }
