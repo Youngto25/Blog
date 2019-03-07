@@ -1,0 +1,40 @@
+a <- {
+    '0': 0,
+    '1': 1,
+    '2': 2,
+    '3': 4,
+    '4': 4,
+    'length': 5
+}
+i,temp <- 0
+while(i<a['length']-1)
+    j <- 0
+    while(j<= a['length']-1-i)
+        if(a[j] > a[j+1])
+            temp <- a[j]
+            a[j] <- a[j+1]
+            a[j+1] <- a[j]
+            end
+        j <-j+1
+        end
+    i <- i+1
+end
+
+int[] a={2,8,5,9,7,3,8};
+		int i=1;
+		int temp=0;
+		while(i < a.length){
+			int j=0;
+			while(j<= a.length-1-i){
+				if(a[j] > a[j+1]){
+					temp = a[j];
+					a[j] = a[j+1];
+					a[j+1] = temp;
+				}
+				j=j+1;
+			}
+			i=i+1;
+		}
+		for(int k=0;k<a.length; k++){
+			System.out.print(a[k]+"\t");
+		}
