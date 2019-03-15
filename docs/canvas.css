@@ -2,7 +2,11 @@ body{
     margin: 0;
   }
   #canvas{
-    background: red;
-    height: 100vh;
-    position: relative;
+    background: green;
+  }
+  button{
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
   }
