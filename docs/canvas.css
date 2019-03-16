@@ -3,6 +3,7 @@ body{
   }
   #canvas{
     background: green;
+    display: block;
   }
   button{
     margin: 0;
