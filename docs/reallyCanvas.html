@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>我的画板</title>
-        <link rel="stylesheet" href="./canvas.css">
-    </head>
-    <body>
-        <canvas id="canvas"></canvas>
-        <button id="eraser">橡皮擦</button>
-    </body>
-    <script src="./canvas.js"></script>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的画板</title>
+    <link rel="stylesheet" href="./canvas.css">
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="actions" class="actions">
+        <svg id="brush" class="active icon"><!--默认brush高亮-->
+            <use xlink:href="#icon-brush"></use>
+        </svg>
+        <svg id="eraser" class="icon">
+            <use xlink:href="#icon-eraser"></use>
+        </svg>
+        <svg id="clear" class="icon">
+            <use xlink:href="#icon-clear"></use>
+        </svg>
+        <svg id="download" class="icon">
+            <use xlink:href="#icon-download"></use>
+        </svg>
+    </div>
+    <ol class="colors">
+        <li id="black" class="active black"></li>
+        <li id="red" class="red"></li>
+        <li id="green" class="green"></li>
+        <li id="blue" class="blue"></li>
+    </ol>
+    <ol class="sizes">
+        <li id="thin" class="thin"></li>
+        <li id="thick" class="thick"></li>
+    </ol>
+</body>
+<script src="./canvas.js"></script>
+<script src="//at.alicdn.com/t/font_1091431_coqrr9be7bn.js"></script>
+
 </html>
