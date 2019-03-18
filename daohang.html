@@ -4,15 +4,25 @@
 <head>
     <title>我的导航栏</title>
     <style>
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .leftChild,
+        .rightChild {
+            float: left;
+            width: 50%;
+        }
+
         body {
             margin: 0;
             padding: 0;
         }
 
-        .main {}
-
         ol {
-            list-style: none;
+
         }
 
         li {
@@ -25,24 +35,40 @@
         }
 
         a {
-            list-style: none;
             text-decoration: transparent;
+        }
+        .navigation{
+            background: rgba(23, 182, 174, 0.575);
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <nav class="main">
-        <ol>
-            <li><a href="F:\" target="_blank">F盘</a></li>
-            <li><a href="C:\" target="_blank">E盘</a></li>
-            <li><a href="C:\" target="_blank">D盘</a></li>
-            <li><a href="C:\" target="_blank">C盘</a></li>
-            <li><a href="F:\BaiduNetdiskDownload\css揭秘.pdf" target="_blank">css揭秘</a></li>
-            <li><a href="F:\BaiduNetdiskDownload\代码大全2.pdf" target="_blank">代码大全2</a></li>
-            <li><a href="F:\BaiduNetdiskDownload" target="_blank">百度网盘下载</a></li>
-            <li><a href="http://css-tricks.com/centering-in-the-unknown" target="_blank">不为人知的居中方法</a></li>
-    </nav>
+    <nav class="navigation">简单导航</nav>
+    <div class="parents clearfix">
+        <div class="leftChild">
+            <em>系统内导航</em>
+            <ol>
+                <li><a href="F:\" target="_blank">F盘</a></li>
+                <li><a href="C:\" target="_blank">E盘</a></li>
+                <li><a href="C:\" target="_blank">D盘</a></li>
+                <li><a href="C:\" target="_blank">C盘</a></li>
+                <li><a href="F:\BaiduNetdiskDownload\css揭秘.pdf" target="_blank">css揭秘</a></li>
+                <li><a href="F:\BaiduNetdiskDownload\代码大全2.pdf" target="_blank">代码大全2</a></li>
+                <li><a href="F:\BaiduNetdiskDownload" target="_blank">百度网盘下载</a></li>
+            </ol>
+        </div>
+        <div class="rightChild">
+            <em>网络链接导航</em>
+            <ol>
+                <li><a href="http://css-tricks.com/centering-in-the-unknown" target="_blank">不为人知的居中方法</a></li>
+                <li><a href="http://www.ltaaa.com/" target="_blank">龙腾网</a></li>
+                <li><a href="http://www.santaihu.com/" target="_blank">三泰虎</a></li>
+            </ol>
+        </div>
+    </div>
+
 </body>
 <script></script>
 
