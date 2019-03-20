@@ -3,78 +3,62 @@
 
 <head>
     <title>我的导航栏</title>
-    <style>
-        .clearfix::after {
-            content: "";
-            display: block;
-            clear: both;
-        }
-
-        .leftChild,
-        .rightChild {
-            float: left;
-            width: 50%;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        ol {}
-
-        li {
-            color: black;
-            margin: auto;
-        }
-
-        li:hover {
-            color: red;
-        }
-
-        a {
-            text-decoration: transparent;
-        }
-
-        .navigation {
-            background: rgba(23, 182, 174, 0.575);
-            line-height: 3;
-            font-size: 1.5em;
-            font-family: NSimSun;
-        }
-        .parents{
-            font-family: NSimSun;
-            font-size: 1.2em;
-        }
-    </style>
+    <link rel="stylesheet" href="./daohang.css">
 </head>
 
 <body>
-    <nav class="navigation">简单导航</nav>
-    <div class="parents clearfix">
-        <div class="leftChild">
-            <strong>系统内导航</strong>
-            <ol>
-                <li><a href="F:\" target="_blank">F盘</a></li>
-                <li><a href="C:\" target="_blank">E盘</a></li>
-                <li><a href="C:\" target="_blank">D盘</a></li>
-                <li><a href="C:\" target="_blank">C盘</a></li>
-                <li><a href="F:\BaiduNetdiskDownload\css揭秘.pdf" target="_blank">css揭秘</a></li>
-                <li><a href="F:\BaiduNetdiskDownload\代码大全2.pdf" target="_blank">代码大全2</a></li>
-                <li><a href="F:\BaiduNetdiskDownload" target="_blank">百度网盘下载</a></li>
-            </ol>
+    <div class="topNavBar">
+        <div class="topNavBar-inner clearfix">
+            <!--clearfix可以解决float所造成的已知的bug-->
+            <a class="logo" href="#" alt="logo" style="float:left;">
+                <!--浮动，表明元素必须浮动在其所在的块容器左侧的关键字-->
+                <span class="blake">Blake</span><span class="yang">Yang</span>
+            </a>
+            <nav style="float:right;">
+                <ul class="clearfix">
+                    <li><a href="#">See the World</a></li>
+                    <li><a href="#">Graduation Porject</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Learning Resouces</a></li>
+                    <li><a href="#">Entertainment</a></li>
+                    <li><a href="#">Contact Information</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="rightChild">
-            <strong>网络链接导航</strong>
-            <ol>
-                <li><a href="http://css-tricks.com/centering-in-the-unknown" target="_blank">不为人知的居中方法</a></li>
-                <li><a href="http://www.ltaaa.com/" target="_blank">龙腾网</a></li>
-                <li><a href="http://www.santaihu.com/" target="_blank">三泰虎</a></li>
-                <li><a href="http://cndevdocs.com/" target="_blank">前端开发中文文档导航</a></li>
-            </ol>
+    </div>
+    <div class="banner">
+        <div class="mask"></div>
+    </div>
+    <div class="middle">
+        <div class="parents clearfix">
+            <div class="leftChild">
+                <strong>系统内导航</strong>
+                <ol>
+                    <li><a href="F:\" target="_blank">F盘</a></li>
+                    <li><a href="C:\" target="_blank">E盘</a></li>
+                    <li><a href="C:\" target="_blank">D盘</a></li>
+                    <li><a href="C:\" target="_blank">C盘</a></li>
+                    <li><a href="F:\BaiduNetdiskDownload\css揭秘.pdf" target="_blank">css揭秘</a></li>
+                    <li><a href="F:\BaiduNetdiskDownload\代码大全2.pdf" target="_blank">代码大全2</a></li>
+                    <li><a href="F:\BaiduNetdiskDownload" target="_blank">百度网盘下载</a></li>
+                </ol>
+            </div>
+            <div class="rightChild">
+                <strong>网络链接导航</strong>
+                <ol>
+                    <li><a href="http://css-tricks.com/centering-in-the-unknown" target="_blank">不为人知的居中方法</a></li>
+                    <li><a href="http://www.ltaaa.com/" target="_blank">龙腾网</a></li>
+                    <li><a href="http://www.santaihu.com/" target="_blank">三泰虎</a></li>
+                    <li><a href="http://cndevdocs.com/" target="_blank">前端开发中文文档导航</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank">油管</a></li>
+                </ol>
+            </div>
         </div>
     </div>
 
+
 </body>
 <script></script>
+
 </html>
