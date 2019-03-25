@@ -62,7 +62,24 @@
             </div>
         </div>
     </div>
+	<script>
+		setTimeout(function() {
+                yang()
+            }, 250) //延迟0.25秒弹出
+		window.onscroll = function() {
+            yang() //当页面滚动时触发
+        }
 
+        function yang() {
+            let specialTags = document.querySelector('middle')
+            let minIndex = 0
+            //当滚动且触发minIndex时，去除offset样式，此时内容会弹出
+            specialTags.classList.remove('offset')
+                //找到minIndex的Id，此时根据Id来找到此节点，后找到父节点，并添加样式
+        }	
+	</script>
+
+/*任务1：给链接添加动画，弹出*/
 
 </body>
 <script></script>
