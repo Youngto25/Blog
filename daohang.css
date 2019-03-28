@@ -144,9 +144,9 @@ body {
 
 .middle {
     margin-top: -75vh;
-    background: #efefef96;
     margin-left: auto;
     margin-right: auto;
+    background: #efefef96;
     max-width: 900px;
 	transform: translateY(0);
 	transform: all 0.5s;
