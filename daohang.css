@@ -175,3 +175,14 @@ body {
 .banner .mask {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+span{
+    display: inline-block;
+    width: 15em;
+    text-align: justify;
+}
+span::after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
