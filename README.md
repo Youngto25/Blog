@@ -7,4 +7,4 @@ canvas:https://youngto25.github.io/blog/docs/reallyCanvas.html
 <br>
 https://youngto25.github.io/blog/docs/fakeCanvas.html
 <br>
-自制导航：https://youngto25.github.io/blog/
+自制导航：https://youngto25.github.io/blog/daohang.html
