@@ -149,7 +149,8 @@ body {
     background: #efefef96;
     max-width: 900px;
 	transform: translateY(0);
-	transform: all 0.5s;
+    transform: all 0.5s;
+    border-radius: 10px;
 }
 
 .middle.offset {
