@@ -31,3 +31,35 @@ spread.addEventListener('click', function(){
   content.classList.toggle('active');
   spread.style.display = 'none';
 })
+
+
+var keyword = $('#keyword');
+var button = $('#button');
+var value = '';
+var clock;
+
+keyword.oninput = function(e){
+  if(clock){
+    clearInterval(clock)
+  } 
+  clock = setTimeout(()=>{
+    value = keyword.value;
+    console.log(value)
+  },100)
+}
+console.log(value)
+
+button.addEventListener('click',function(e){
+  var url = 'https://www.google.com/search?q='+value;
+  window.open(url,'_blank');
+})
+
+document.onkeyup = function(e) {
+  // 兼容FF和IE和Opera
+  var event = e || window.event;
+  var key = event.which || event.keyCode || event.charCode;
+  if (key == 13) {
+    var url = 'https://www.google.com/search?q='+value;
+    window.open(url,'_blank');
+  }
+};
