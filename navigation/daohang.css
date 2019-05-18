@@ -155,22 +155,33 @@ a {
 
 .open{
     position: absolute;
-    left: 10px;
     bottom: 200px;
     cursor: pointer;
     z-index: 1;
     color: #ced6e0;
     font-size: 20px;
+    width: 50px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.open:hover{
+    background: #cccccc;
+    color: #30336b;
 }
 
 .close{
     cursor: pointer;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     bottom: 150px;
     color: #747d8c;
     font-size: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+}
+.close:hover{
+    background: #cccccc;
 }
 
 .sidebar{
@@ -200,8 +211,19 @@ a {
     transform: translateX(0%);
 }
 
+.content ol{
+    width: 70px;
+    text-align: center;
+}
+
 .content ol>li {
-    margin: 20px 0;
+    padding: 10px 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.content ol>li:hover{
+    background: #cccccc;
 }
 
 .task{

@@ -1,19 +1,33 @@
 var $ = function(selector){
   return document.querySelector(selector);
 }
+var $$ = function(selector){
+  return document.querySelectorAll(selector);
+}
 
 var close = $('.close');
-var open = $('.open');
+var spread = $('.open');
 var content = $('.content');
+var list = $('.content .list');
+
+list.addEventListener('click',function(e){
+  var li = e.target;
+  console.log(e.target);
+  a = li.firstChild;
+  console.log(a);
+  href = a.getAttribute('href');
+  console.log(href);
+  window.open(href,'_blank');
+})
 
 close.addEventListener('click', function(){
   content.classList.toggle('active');
   setTimeout(()=>{
-    open.style.display = 'inline-block'
+    spread.style.display = 'inline-block'
   },200)
 })
 
-open.addEventListener('click', function(){
+spread.addEventListener('click', function(){
   content.classList.toggle('active');
-  open.style.display = 'none';
+  spread.style.display = 'none';
 })
