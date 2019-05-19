@@ -50,8 +50,7 @@ keyword.oninput = function(e){
 console.log(value)
 
 button.addEventListener('click',function(e){
-  var url = 'https://www.google.com/search?q='+value;
-  window.open(url,'_blank');
+  skip();
 })
 
 document.onkeyup = function(e) {
@@ -59,7 +58,11 @@ document.onkeyup = function(e) {
   var event = e || window.event;
   var key = event.which || event.keyCode || event.charCode;
   if (key == 13) {
-    var url = 'https://www.google.com/search?q='+value;
-    window.open(url,'_blank');
+    ship();
   }
 };
+
+function skip(){
+  var url = 'https://www.google.com/search?q='+value;
+  window.open(url,'_blank');
+}
