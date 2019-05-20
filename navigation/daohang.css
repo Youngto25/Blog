@@ -155,7 +155,7 @@ a {
 
 .open{
     position: absolute;
-    bottom: 200px;
+    bottom: 180px;
     cursor: pointer;
     z-index: 1;
     color: #ced6e0;

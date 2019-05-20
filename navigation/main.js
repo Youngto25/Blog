@@ -50,19 +50,18 @@ keyword.oninput = function(e){
 console.log(value)
 
 button.addEventListener('click',function(e){
-  skip();
+  var url = 'https://www.google.com/search?q='+value;
+  window.open(url,'_blank');
 })
 
 document.onkeyup = function(e) {
   // 兼容FF和IE和Opera
   var event = e || window.event;
+  //判断是哪个按键
   var key = event.which || event.keyCode || event.charCode;
   if (key == 13) {
-    ship();
+    var url = 'https://www.google.com/search?q='+value;
+    window.open(url,'_blank');
   }
 };
 
-function skip(){
-  var url = 'https://www.google.com/search?q='+value;
-  window.open(url,'_blank');
-}
