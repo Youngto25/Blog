@@ -11,12 +11,7 @@ var content = $('.content');
 var list = $('.content .list');
 
 list.addEventListener('click',function(e){
-  var li = e.target;
-  console.log(e.target);
-  a = li.firstChild;
-  console.log(a);
-  href = a.getAttribute('href');
-  console.log(href);
+  href = e.target.firstChild.getAttribute('href');
   window.open(href,'_blank');
 })
 
@@ -44,10 +39,8 @@ keyword.oninput = function(e){
   } 
   clock = setTimeout(()=>{
     value = keyword.value;
-    console.log(value)
   },100)
 }
-console.log(value)
 
 button.addEventListener('click',function(e){
   var url = 'https://www.google.com/search?q='+value;
@@ -63,5 +56,5 @@ document.onkeyup = function(e) {
     var url = 'https://www.google.com/search?q='+value;
     window.open(url,'_blank');
   }
-};
+}
 
