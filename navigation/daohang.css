@@ -110,22 +110,15 @@ a {
 
 .middle .parents .leftChild>ol>li,
 .middle .parents .rightChild>ol>li {
-    margin: 6px 10px;
-}
-
-.middle .parents .leftChild>ol>li>a,
-.middle .parents .rightChild>ol>li>a {
-    text-decoration: transparent;
+    margin: 10px 10px;
     color: #30336b;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
-    padding: 5px;
     font-size: 0.8em;
 }
 
-.middle .parents .leftChild>ol>li>a:hover,
-.middle .parents .rightChild>ol>li>a:hover {
-    border-bottom: 3px solid green;
+.middle .parents .leftChild>ol>li:hover,
+.middle .parents .rightChild>ol>li:hover {
+    cursor: pointer;
+    color: #e06567;
 }
 
 .middle {
@@ -157,7 +150,6 @@ a {
     position: absolute;
     bottom: 180px;
     cursor: pointer;
-    z-index: 1;
     color: #ced6e0;
     font-size: 20px;
     width: 50px;

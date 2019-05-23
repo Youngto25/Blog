@@ -4,6 +4,7 @@
 <head>
     <title>我的导航栏</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vue.min.js"></script>
     <link rel="stylesheet" href="./daohang.css">
 </head>
 
@@ -32,59 +33,27 @@
     <div class="middle">
         <div class="parents clearfix">
             <div class="leftChild">
-                <strong>娱乐导航</strong>
+                <strong>{{left_title}}</strong>
                 <ol>
-                    <li><a href="F:\" target="_blank">F盘</a></li>
-                    <li><a href="C:\" target="_blank">E盘</a></li>
-                    <li><a href="C:\" target="_blank">D盘</a></li>
-                    <li><a href="C:\" target="_blank">C盘</a></li>
-                    <li><a href="F:\BaiduNetdiskDownload\css揭秘.pdf" target="_blank">css揭秘</a></li>
-                    <li><a href="F:\BaiduNetdiskDownload\代码大全2.pdf" target="_blank">代码大全2</a></li>
-                    <li><a href="F:\BaiduNetdiskDownload" target="_blank">百度网盘下载</a></li>
-                    <li><a href="http://cndevdocs.com/" target="_blank">前端开发中文文档导航</a></li>
-                    <li><a href="https://juejin.im/timeline" target="_blank">掘金</a></li>
-                    <li><a href="https://time.geekbang.org/" target="_blank">极客</a></li>
-                    <li><a href="https://www.zhangxinxu.com/wordpress/page/64/" target="_blank">张鑫旭</a></li>
-                    <li><a href="http://www.ruanyifeng.com/blog/developer/" target="_blank">阮一峰</a></li>
+                    <li v-for="(item , index) of hrefs" v-on:click="window.open(item.href,'_blank')">{{item.value}}</li>
                 </ol>
             </div>
             <div class="rightChild">
-                <strong>学习导航</strong>
+                <strong>{{right_title}}</strong>
                 <ol>
-                    <li><a href="http://css-tricks.com/centering-in-the-unknown" target="_blank">不为人知的居中方法</a></li>
-                    <li><a href="http://www.ltaaa.com/" target="_blank">龙腾网</a></li>
-                    <li><a href="http://www.santaihu.com/" target="_blank">三泰虎</a></li>
-                    <li><a href="http://2chcn.com/" target="_blank">2ch中文网</a></li>
-                    <li><a href="http://how2j.cn/stage/27.html" target="_blank">HOW2J</a></li>
-                    <li><a href="https://dribbble.com/" target="_blank">Dribbble</a></li>
-                    <li><a href="https://css-tricks.com/" target="_blank">CSS-tricks</a></li>
-                    <li><a href="https://www.google.com/" target="_blank">Google</a></li>
-                    <li><a href="https://codepen.io/" target="_blank">Codepen</a></li>
-                    <li><a href="https://flatuicolors.com/" target="_blank">Flatuicolors</a></li>
-                    <li><a href="https://www.colorzilla.com/gradient-editor/" target="_blank">Colorzilla</a></li>
+                    <li v-for="(item , index) of hrefs":key="index" v-on:click="window.open(item.href,'_blank')">{{item.value}}</li>
                 </ol>
             </div>
         </div>
     </div>
 
-    <span class="open">三</span>
-
     <div class="sidebar">
-        <div class="content">
+        <span class="open" v-on:click="moveout">三</span>
+        <div class="content" v-bind:class={active:key}>
+            <span class="close" v-on:click="movein">三</span>
             <ol class="list">
-                <li><a href="https://weibo.com/u/5378341288/home?wvr=5&sudaref=weibo.com&display=0&retcode=6102&sudaref=passport.weibo.com"
-                        target="_blank">微博</a></li>
-                <li><a href="https://www.douyu.com" target="_blank">斗鱼</a></li>
-                <li><a href="https://www.huya.com" target="_blank">虎牙</a></li>
-                <li><a href="https://www.youku.com" target="_blank">优酷</a></li>
-                <li><a href="https://v.qq.com/" target="_blank">腾讯视频</a></li>
-                <li><a href="https://www.bilibili.com/" target="_blank">Bilibili</a></li>
-                <li><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
-                <li><a href="https://www.quora.com/" target="_blank">Quora</a></li>
-                <li><a href="https://www.twitter.com/" target="_blank">Twitter</a></li>
-                <li><a href="https://www.reddit.com/" target="_blank">Reddit</a></li>
+                <li v-for="(item, index) of hrefs":key="index" v-on:click="window.open(item.href,'_blank')">{{item.value}}</li>
             </ol>
-            <span class="close">三</span>
         </div>
     </div>
 
@@ -96,6 +65,7 @@
     </div>
 
     <script src="./main.js"></script>
+    <script src="index.js"></script>
 
 </body>
 
