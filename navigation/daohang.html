@@ -5,7 +5,8 @@
     <title>我的导航栏</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="vue.min.js"></script>
-    <link rel="stylesheet" href="./daohang.css">
+    <link rel="stylesheet" media="(min-width: 1050px)" href="./daohang.css">
+    <link rel="stylesheet" media="(max-width: 1049px)" href="./mobile.css">
 </head>
 
 <body>
@@ -29,24 +30,26 @@
             </nav>
         </div>
     </div>
-    <div class="banner"></div>
-    <div class="middle">
-        <div class="parents clearfix">
-            <div class="leftChild">
-                <strong>{{left_title}}</strong>
-                <ol>
-                    <li v-for="(item , index) of hrefs" v-on:click="window.open(item.href,'_blank')">{{item.value}}</li>
-                </ol>
-            </div>
-            <div class="rightChild">
-                <strong>{{right_title}}</strong>
-                <ol>
-                    <li v-for="(item , index) of hrefs":key="index" v-on:click="window.open(item.href,'_blank')">{{item.value}}</li>
-                </ol>
+    <div class="banner">
+        <div class="middle">
+            <div class="parents clearfix">
+                <div class="leftChild">
+                    <strong>{{left_title}}</strong>
+                    <ol>
+                        <li v-for="(item , index) of hrefs" v-on:click="window.open(item.href,'_blank')">{{item.value}}</li>
+                    </ol>
+                </div>
+                <div class="rightChild">
+                    <strong>{{right_title}}</strong>
+                    <ol>
+                        <li v-for="(item , index) of hrefs":key="index" v-on:click="window.open(item.href,'_blank')">{{item.value}}</li>
+                    </ol>
+                </div>
             </div>
         </div>
-    </div>
 
+    </div>
+    
     <div class="sidebar">
         <span class="open" v-on:click="moveout">三</span>
         <div class="content" v-bind:class={active:key}>
