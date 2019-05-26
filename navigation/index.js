@@ -10,7 +10,11 @@ left_href = [
   {"href":'https://juejin.im/timeline',"value":'掘金'},
   {"href":'https://time.geekbang.org/',"value":'极客'},
   {"href":'https://www.zhangxinxu.com/wordpress/page/64/',"value":'张鑫旭'},
-  {"href":'http://www.ruanyifeng.com/blog/developer/',"value":'阮一峰'}
+  {"href":'http://www.ruanyifeng.com/blog/developer/',"value":'阮一峰'},
+  {"href":'https://www.kancloud.cn/yunye/axios/234845',"value":'Axios教程'},
+  {"href":'https://cn.vuejs.org/v2/guide/',"value":'Vue教程'},
+  {"href":'http://es6.ruanyifeng.com/',"value":'ES6教程'},
+  {"href":'https://wangdoc.com/javascript/',"value":'JavaScript教程'},
 ]
 
 var left = new Vue({
@@ -34,7 +38,8 @@ right_href = [
   {"href":'https://codepen.io/',"value":'Codepen'},
   {"href":'https://www.google.com/',"value":'Google'},
   {"href":'https://flatuicolors.com/',"value":'Flatuicolors'},
-  {"href":'https://www.colorzilla.com/gradient-editor/',"value":'Colorzilla'}
+  {"href":'https://www.colorzilla.com/gradient-editor/',"value":'Colorzilla'},
+  {"href":'https://www.w3cplus.com/',"value":'w3cplus'}
 ]
 
 var left = new Vue({
@@ -51,6 +56,7 @@ var side_href = [
   {"href":'https://www.huya.com',"value":'虎牙'},
   {"href":'https://www.youku.com',"value":'优酷'},
   {"href":'https://v.qq.com/',"value":'腾讯视频'},
+  {"href":'http://tv.cctv.com/live/?spm=C96370.PsikHJQ1ICOX.Exanhtjhchcl.1',"value":'CCTV'},
   {"href":'https://www.bilibili.com/',"value":'Bilibili'},
   {"href":'https://www.youtube.com/',"value":'Youtube'},
   {"href":'https://www.quora.com/',"value":'Quora'},
