@@ -5,16 +5,23 @@ left_href = [
   {"href":'C:\\',"value":'C盘'},
   {"href":'D:\\',"value":'D盘'},
   {"href":'E:\\',"value":'E盘'},
-  {"href":'F:\BaiduNetdiskDownload',"value":'百度网盘下载'},
+  {"href":'F:\\BaiduNetdiskDownload',"value":'百度网盘下载'},
   {"href":'http://cndevdocs.com/',"value":'前端开发中文文档导航'},
   {"href":'https://juejin.im/timeline',"value":'掘金'},
   {"href":'https://time.geekbang.org/',"value":'极客'},
   {"href":'https://www.zhangxinxu.com/wordpress/page/64/',"value":'张鑫旭'},
   {"href":'http://www.ruanyifeng.com/blog/developer/',"value":'阮一峰'},
+  {"href":'https://framework7.io/docs/',"value":'Framework7'},
+  {"href":'https://ant.design/docs/react/introduce-cn',"value":'Ant Design'},
+  {"href":'https://element.eleme.cn/#/zh-CN/component/installation',"value":'Element'},
+  {"href":'https://www.iviewui.com/docs/guide/install',"value":'iView'},
   {"href":'https://www.kancloud.cn/yunye/axios/234845',"value":'Axios教程'},
   {"href":'https://cn.vuejs.org/v2/guide/',"value":'Vue教程'},
+  {"href":'https://cloud.tencent.com/developer/devdocs',"value":'腾讯云社区'},
+  {"href":'https://webpack.docschina.org/concepts/',"value":'Webpack'},
+  {"href":'https://zh.parceljs.org/getting_started.html/',"value":'Parcel'},
   {"href":'http://es6.ruanyifeng.com/',"value":'ES6教程'},
-  {"href":'https://wangdoc.com/javascript/',"value":'JavaScript教程'},
+  {"href":'https://wangdoc.com/javascript/',"value":'JavaScript教程'}
 ]
 
 var left = new Vue({
@@ -31,6 +38,7 @@ right_href = [
   {"href":'http://www.santaihu.com/',"value":'三泰虎'},
   {"href":'http://2chcn.com/',"value":'2ch中文网'},
   {"href":'http://how2j.cn/stage/27.html',"value":'HOW2J'},
+  {"href":'http://ife.baidu.com/',"value":'百度前端技术学院'},
   {"href":'https://ke.qq.com/',"value":'腾讯课堂'},
   {"href":'https://study.163.com/',"value":'网易云课堂'},
   {"href":'https://www.imooc.com/',"value":'慕课网'},
@@ -38,8 +46,10 @@ right_href = [
   {"href":'https://codepen.io/',"value":'Codepen'},
   {"href":'https://www.google.com/',"value":'Google'},
   {"href":'https://flatuicolors.com/',"value":'Flatuicolors'},
+  {"href":'https://colorhunt.co/',"value":'Colorhunt'},
   {"href":'https://www.colorzilla.com/gradient-editor/',"value":'Colorzilla'},
-  {"href":'https://www.w3cplus.com/',"value":'w3cplus'}
+  {"href":'https://www.w3cplus.com/',"value":'w3cplus'},
+  {"href":'https://www.yuque.com/fe9',"value":'前端九部'}
 ]
 
 var left = new Vue({
