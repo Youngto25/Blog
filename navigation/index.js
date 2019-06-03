@@ -71,7 +71,8 @@ var side_href = [
   {"href":'https://www.youtube.com/',"value":'Youtube'},
   {"href":'https://www.quora.com/',"value":'Quora'},
   {"href":'https://www.twitter.com/',"value":'Twitter'},
-  {"href":'https://www.reddit.com/',"value":'Reddit'}
+  {"href":'https://www.reddit.com/',"value":'Reddit'},
+  {"href":'https://www.zhihu.com/',"value":'知乎'}
 ]
 
 function $(selector){
@@ -96,6 +97,34 @@ var side = new Vue({
     },
     moveout(){
       this.key = !this.key
+    }
+  }
+})
+
+new Vue({
+  el: '.wrapper',
+  data: {
+    search: 'search',
+    value: '',
+    url: '',
+    show: false,
+    engine: [
+      {'yinqing':'Google','url':'https://www.google.com/search?q='},
+      {'yinqing':'Bing','url':'https://cn.bing.com/search?q='}
+    ],
+    selected: 'Bing'
+  },
+  methods: {
+    searchItem(){
+      this.engine.map((zhi,index)=>{
+        if(zhi.yinqing === this.selected){
+          return this.url = zhi.url
+        }
+      })
+      window.open(this.url+this.value,'_blank');
+    },
+    change(){
+      this.show = !this.show
     }
   }
 })

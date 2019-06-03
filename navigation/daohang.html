@@ -35,38 +35,51 @@
                 <div class="leftChild">
                     <strong>{{left_title}}</strong>
                     <ol>
-                        <li v-for="(item , index) of hrefs" v-on:click="window.open(item.href,'_blank')">{{item.value}}</li>
+                        <li v-for="(item , index) of hrefs" v-on:click="window.open(item.href,'_blank')">{{item.value}}
+                        </li>
                     </ol>
                 </div>
                 <div class="rightChild">
                     <strong>{{right_title}}</strong>
                     <ol>
-                        <li v-for="(item , index) of hrefs":key="index" v-on:click="window.open(item.href,'_blank')">{{item.value}}</li>
+                        <li v-for="(item , index) of hrefs" :key="index" v-on:click="window.open(item.href,'_blank')">
+                            {{item.value}}</li>
                     </ol>
                 </div>
             </div>
         </div>
 
     </div>
-    
+
     <div class="sidebar">
         <span class="open" v-on:click="moveout">三</span>
         <div class="content" v-bind:class={active:key}>
             <span class="close" v-on:click="movein">三</span>
             <ol class="list">
-                <li v-for="(item, index) of hrefs":key="index" v-on:click="window.open(item.href,'_blank')">{{item.value}}</li>
+                <li v-for="(item, index) of hrefs" :key="index" v-on:click="window.open(item.href,'_blank')">
+                    {{item.value}}</li>
             </ol>
         </div>
     </div>
 
     <div class="wrapper">
+        <ol class="kind">
+            <li v-for="tab in engine" v-show="selected === tab.yinqing">{{tab.yinqing}}</li>
+        </ol>
+        <ol class="list2" v-if="show">
+            <li v-for="(item,index) of engine" @click="selected=item.yinqing">{{item.yinqing}}</li>
+        </ol>
+        <svg class="icon" aria-hidden="true" @click="change">
+            <use xlink:href="#icon-xiala"></use>
+        </svg>
         <span class="container">
-            <input id="keyword" type="text" autocomplete="off">
+            <input id="keyword" type="text" autocomplete="off" v-model="value" @keyup.enter="searchItem">
         </span>
-        <button id="button">search</button>
+        <button id="button" @click="searchItem">{{search}}</button>
     </div>
 
-    <script src="./main.js"></script>
+    <script src="//at.alicdn.com/t/font_1225760_70kqzy5rd7l.js"></script>
+
     <script src="index.js"></script>
 
 </body>
