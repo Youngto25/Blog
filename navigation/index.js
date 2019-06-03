@@ -49,7 +49,8 @@ right_href = [
   {"href":'https://colorhunt.co/',"value":'Colorhunt'},
   {"href":'https://www.colorzilla.com/gradient-editor/',"value":'Colorzilla'},
   {"href":'https://www.w3cplus.com/',"value":'w3cplus'},
-  {"href":'https://www.yuque.com/fe9',"value":'前端九部'}
+  {"href":'https://www.yuque.com/fe9',"value":'前端九部'},
+  {"href":'https://www.chaijs.com/',"value":'chaijs'}
 ]
 
 var left = new Vue({
@@ -112,7 +113,7 @@ new Vue({
       {'yinqing':'Google','url':'https://www.google.com/search?q='},
       {'yinqing':'Bing','url':'https://cn.bing.com/search?q='}
     ],
-    selected: 'Bing'
+    selected: 'Google'
   },
   methods: {
     searchItem(){
