@@ -64,7 +64,7 @@
 
     <div class="wrapper">
         <ol class="kind">
-            <li v-for="tab in engine" v-show="selected === tab.yinqing">{{tab.yinqing}}</li>
+            <li v-for="tab in engine" v-show="selected === tab.yinqing" @click="searchItem">{{tab.yinqing}}</li>
         </ol>
         <ol class="list2" v-if="show">
             <li v-for="(item,index) of engine" @click="selected=item.yinqing">{{item.yinqing}}</li>
