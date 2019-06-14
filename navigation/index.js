@@ -73,7 +73,8 @@ var side_href = [
   {"href":'https://www.quora.com/',"value":'Quora'},
   {"href":'https://www.twitter.com/',"value":'Twitter'},
   {"href":'https://www.reddit.com/',"value":'Reddit'},
-  {"href":'https://www.zhihu.com/',"value":'知乎'}
+  {"href":'https://www.zhihu.com/',"value":'知乎'},
+  {"href":'https://www.guancha.cn/',"value":'观察者'},
 ]
 
 function $(selector){
