@@ -50,7 +50,10 @@ right_href = [
   {"href":'https://www.colorzilla.com/gradient-editor/',"value":'Colorzilla'},
   {"href":'https://www.w3cplus.com/',"value":'w3cplus'},
   {"href":'https://www.yuque.com/fe9',"value":'前端九部'},
-  {"href":'https://www.chaijs.com/',"value":'chaijs'}
+  {"href":'https://www.chaijs.com/',"value":'chaijs'},
+  {"href":'https://vuepress.vuejs.org/zh/',"value":'vuepress'},
+  {"href":'https://www.nowcoder.com/',"value":'牛客'},
+  {"href":'https://leetcode-cn.com/explore/',"value":'Leetcode'},
 ]
 
 var left = new Vue({
