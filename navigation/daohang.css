@@ -86,7 +86,7 @@
     border-radius: 10px;
     position: absolute;
     left: 50%;
-    top: 150px;
+    top: 175px;
     transform: translateX(-50%);
 }
 
@@ -123,7 +123,7 @@
 .close{
     cursor: pointer;
     position: absolute;
-    bottom: 175px;
+    bottom: 150px;
     color: #747d8c;
     font-size: 20px;
     width: 100%;
