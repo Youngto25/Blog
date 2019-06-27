@@ -7,89 +7,49 @@
   <script src="vue.min.js"></script>
   <title>Document</title>
   <style>
-    .changeClass{
-      font-size: 50px;
-      color: yellow;
-    }
   </style>
 </head>
 <body>
   <div id="app">
-    <div v-bind:class="{'changeClass': did}">练习</div>
-    <button v-on:click="handle">changeClass</button>
+    动态组件<br>
+    <component :is="comp"></component>
+    <button @click="change('a')">第一页</button>
+    <button @click="change('b')">第二页</button>
+    <button @click="change('c')">第三页</button>
+    <button @click="change('d')">第四页</button>
   </div>
   <script>
-    var app = new Vue({
+    Vue.component('g-a',{
+      template: `
+        <span>秦时明月汉时关</span>
+      `
+    })
+    Vue.component('g-b',{
+      template: `
+        <span>万里长征人未还</span>
+      `
+    })
+    Vue.component('g-c',{
+      template: `
+        <span>但使龙城飞将在</span>
+      `
+    })
+    Vue.component('g-d',{
+      template: `
+        <span>不教胡马度阴山</span>
+      `
+    })
+    new Vue({
       el: '#app',
       data: {
-        did: false
+        comp: 'g-a'
       },
-      methods: {
-        handle(){
-          this.did = !this.did
+      methods:{
+        change(tag){
+          this.comp = 'g-'+tag
         }
       }
     })
   </script>
-
-  <!-- <div id="app" :class="{'hello': isActive}">
-    对象语法动态绑定class
-    <button @click="change">change</button>
-  </div>
-  <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-        isActive: false
-      },
-      methods: {
-        change(){
-          this.isActive = !this.isActive
-        }
-      }
-    }) -->
-
-    <!-- // var app2 = new Vue({
-    //   el: '#app2',
-    //   data: {
-    //     firstName: 'Zhu',
-    //     lastName: 'Yuanzhang',
-    //     fullName : ''
-    //   },
-    //   watch: {
-    //     firstName: function(value){
-    //       this.firstName = value
-    //       this.fullName = this.firstName+' '+this.lastName
-    //     },
-    //     lastName: function(value){
-    //       this.lastName = value
-    //       this.fullName = this.firstName+' '+this.lastName
-    //     }
-    //   }
-    //   // computed: {
-    //   //   fullName: function(){
-    //   //     return this.firstName + ' ' + this.lastName
-    //   //   }
-    //   // }
-    // })
-
-    // var app = new Vue({
-    //   el: '#app',
-    //   data: {
-    //     message: 'To-bo-or-not-to-be,This-is-a-problem!'
-    //   },
-    //   computed: {
-    //     msg: {
-    //       get: function(){
-    //         return this.message.split(',').join('-').split('-').reverse().join(' ')
-    //       },
-    //     }  
-    //   },
-    //   methods: {
-    //     change(){
-    //       return this.message.split(',').join('-').split('-').reverse().join(' ')
-    //     }
-    //   }
-    // }) -->
 </body>
 </html>
