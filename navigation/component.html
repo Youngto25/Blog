@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="vue.min.js"></script>
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<body>
+
+    <div id="app2">
+      <t-demo></t-demo>
+      <y-demo></y-demo>
+    </div>
+<hr>
+    <div id="app">
+      <g-add></g-add>
+      <g-bdd></g-bdd>
+    </div>
+
+
+      <script>
+      Vue.component('g-add',{
+        data(){
+          return {
+            message: '其他子组件的数据'
+          }
+        },
+        template:`
+          <button @click="handle">传递数据给其他子组件</button>
+        `,
+        methods:{
+          handle(){
+            this.$root.eventBus.$emit('getMe',this.message)
+          }
+        }
+      })
+
+      Vue.component('g-bdd',{
+        data(){
+          return {
+            message: '还未传递给我'
+          }
+        },
+        template:`
+          <span>{{this.message}}</span>
+        `,
+        mounted(){
+          this.$root.eventBus.$on('getMe',(value)=>{
+            console.log(value)
+            console.log(this.message)
+            this.message = value
+          })
+        }
+      })
+
+      new Vue({
+        el: '#app',
+        data: {
+          eventBus: new Vue()
+        }
+      })
+      </script>
+</body>
+</html>
