@@ -135,5 +135,12 @@ new Vue({
     change(){
       this.show = !this.show
     }
+  },
+  directives: {
+    'focus':{
+      inserted(el){
+        el.focus()
+      }
+    }
   }
 })

@@ -73,7 +73,7 @@
             <use xlink:href="#icon-xiala"></use>
         </svg>
         <span class="container">
-            <input id="keyword" type="text" autocomplete="off" v-model="value" @keyup.enter="searchItem">
+            <input id="keyword" type="text" autocomplete="off" v-model="value" @keyup.enter="searchItem" v-focus>
         </span>
         <button id="button" @click="searchItem">{{search}}</button>
     </div>
