@@ -80,7 +80,7 @@
 }
 
 .middle {
-    background: #efefef;
+    background: rgba(255, 255, 255, 0.8);
     min-width: 900px;
     transform: all 0.5s;
     border-radius: 10px;
