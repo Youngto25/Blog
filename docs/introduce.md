@@ -6,7 +6,7 @@
 - getContext() 获得渲染上下文和它的绘画功能
 
 ### 绘制矩形
-![canvas]()
+![canvas](https://github.com/Youngto25/blog/blob/master/docs/src/images/canvas.png)
 
 - fillRect(x,y,width,height)  绘制一个填充的矩形
 - strokeRect(x,y,width,height) 绘制一个矩形的边框
