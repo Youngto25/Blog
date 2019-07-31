@@ -132,7 +132,6 @@ button {
   left: 50%;
   margin-left: -42px;
   transform: translateY(-100%);
-  transition: transform .5s;
   display: flex;
   justify-content: center;
   align-items: center;

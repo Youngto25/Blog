@@ -155,7 +155,7 @@ function remindMe(id){
             $('.remind .text').innerHTML = item.content
         }
     })
-    $('.remind').style.transform = 'translateY(0)'
+    $('.remind').style = 'transform: translateY(0);transition: transform 0.5s;'
     setTimeout(()=>{
         $('.remind').style.transform = 'translateY(-100%)'
     },2000)
