@@ -97,20 +97,27 @@ function drawLine(x1, y1, x2, y2) {
 }
 
 
-brush.onclick = function(){
+brush.onclick = function(e){
+    let id = e.target.id
     eraserEnable = false
     brush.classList.add('active')
     eraser.classList.remove('active')
+    remindMe(id)
 }
-eraser.onclick = function(){
+eraser.onclick = function(e){
+    let id = e.target.id
     eraserEnable = true
     eraser.classList.add('active')
     brush.classList.remove('active')
+    remindMe(id)
 }
-clear.onclick = function(){
+clear.onclick = function(e){
+    let id = e.target.id
     context.clearRect(0,0,canvas.width,canvas.height)
+    remindMe(id)
 }
-download.onclick = function(){
+download.onclick = function(e){
+    let id = e.target.id
     let url = canvas.toDataURL("image/png")
     let a = document.createElement('a')
     document.body.appendChild(a)
@@ -118,6 +125,7 @@ download.onclick = function(){
     a.download = '我的画'
     a.target = '_blank'
     a.click()
+    remindMe(id)
 }
 
 
@@ -158,7 +166,7 @@ function remindMe(id){
     $('.remind').style = 'transform: translateY(0);transition: transform 0.5s;'
     setTimeout(()=>{
         $('.remind').style.transform = 'translateY(-100%)'
-    },2000)
+    },1000)
 }
 
 function x(el,color){
