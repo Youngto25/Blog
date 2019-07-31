@@ -1,4 +1,7 @@
 # 画板
+描述：一个可以绘画及下载的画板。
+
+技术栈：canvas ES6 webpack scss
 
 ## canvas基本使用
 
@@ -47,6 +50,9 @@ x与y指定了在canvas画布上所绘制的矩形的左上角（相对于原点
 - 可以擦除
 - 可以清空画板
 - 可以进行保存
+
+## 效果图
+![canvas](https://github.com/Youngto25/blog/blob/master/docs/src/images/canvas.jpg)
 
 ## 实现
 ### 在html上设置标签canvas，并设置id="canvas"
