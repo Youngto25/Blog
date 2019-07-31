@@ -4,13 +4,16 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的画板</title>
-    <link rel="stylesheet" href="./canvas.css">
+    <link rel="icon" href="fcanvas.ico">
 </head>
 
 <body>
     <canvas id="canvas"></canvas>
+    <div class="remind">
+        <span class="text"></span>
+    </div>
     <div id="actions" class="actions">
-        <svg id="brush" class="active icon"><!--默认brush高亮-->
+        <svg id="brush" class="active icon">
             <use xlink:href="#icon-brush"></use>
         </svg>
         <svg id="eraser" class="icon">
@@ -30,11 +33,10 @@
         <li id="blue" class="blue"></li>
     </ol>
     <ol class="sizes">
-        <li id="thin" class="thin"></li>
+        <li id="thin" class="thin active"></li>
         <li id="thick" class="thick"></li>
     </ol>
 </body>
-<script src="./canvas.js"></script>
-<script src="//at.alicdn.com/t/font_1091431_coqrr9be7bn.js"></script>
+<script src="./main.js"></script>
 
 </html>
